@@ -1,0 +1,39 @@
+{
+  "name": "warsija",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroui/react": "^3.0.3",
+    "@heroui/styles": "^3.0.3",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@tanstack/react-query": "^5.100.9",
+    "axios": "^1.16.0",
+    "date-fns": "^4.1.0",
+    "html5-qrcode": "^2.3.8",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.7",
+    "lucide-react": "^0.473.0",
+    "next": "^16.2.4",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.12.7",
+    "tailwind-variants": "^0.2.1",
+    "tailwindcss": "^4.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  }
+}
