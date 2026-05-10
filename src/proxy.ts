@@ -1,15 +1,16 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const token = request.cookies.get('access_token')?.value;
   const { pathname } = request.nextUrl;
 
   const isAuthRoute = pathname.startsWith('/login');
-  const isProtectedRoute = pathname.startsWith('/dashboard') ||
-                           pathname.startsWith('/products') ||
-                           pathname.startsWith('/transactions') ||
-                           pathname.startsWith('/staff');
+  const isProtectedRoute =
+    pathname.startsWith('/dashboard') ||
+    pathname.startsWith('/products') ||
+    pathname.startsWith('/transactions') ||
+    pathname.startsWith('/staff');
 
   // No token and trying to access protected route -> redirect to login
   if (!token && isProtectedRoute) {
@@ -25,7 +26,7 @@ export function middleware(request: NextRequest) {
   if (token && pathname.startsWith('/staff')) {
     try {
       const payload = JSON.parse(atob(token.split('.')[1]));
-      if (payload.role !== 'owner') {
+      if (payload.role !== 'owner' && payload.role !== 'admin') {
         return NextResponse.redirect(new URL('/dashboard', request.url));
       }
     } catch {

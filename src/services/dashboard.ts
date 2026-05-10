@@ -12,6 +12,12 @@ export interface ChartDataPoint {
   quantity: number;
 }
 
+export interface TransformedChartData {
+  name: string;
+  Masuk: number;
+  Keluar: number;
+}
+
 export const dashboardService = {
   getSummary: async (): Promise<DashboardSummary> => {
     return apiClient.get('/dashboard/summary');

@@ -7,7 +7,7 @@ export interface LoginPayload {
 }
 
 export interface LoginResponse {
-  token: string;
+  access_token: string;
   user: {
     id: string;
     email: string;
@@ -30,8 +30,12 @@ export interface Profile {
 
 export const authService = {
   login: async (payload: LoginPayload): Promise<LoginResponse> => {
-    const response = await apiClient.post<LoginResponse>('/auth/login', payload);
-    setAuthToken(response.token);
+    const response = (await apiClient.post(
+      '/auth/login',
+      payload,
+    )) as LoginResponse;
+
+    setAuthToken(response.access_token);
     return response;
   },
 

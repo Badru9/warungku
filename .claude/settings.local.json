@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"\nfrom docx import Document\ndoc = Document(''/d/Badru/Projects/warsjia/PRD_Warungku_v1.0.docx'')\nfor p in doc.paragraphs:\n    print(p.text)\n\")",
+      "Bash(python3:*)",
+      "Bash(npx create-next-app@14:*)",
+      "Bash(npm install:*)",
+      "Bash(node:*)",
+      "Bash(ls:*)",
+      "Bash(npx tsc:*)",
+      "Bash(exit:*)",
+      "Skill(supabase)",
+      "Skill(superpowers:brainstorming)",
+      "Bash(cat:*)",
+      "Skill(superpowers:writing-plans)",
+      "Skill(superpowers:subagent-driven-development)",
+      "Bash(npx eslint:*)",
+      "Bash(npx next lint:*)",
+      "Bash(cd:*)",
+      "Bash(npm run lint)",
+      "Skill(superpowers:requesting-code-review)",
+      "Skill(superpowers:using-superpowers)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(powershell:*)",
+      "Bash(findstr:*)",
+      "Skill(superpowers:test-driven-development)",
+      "Bash(git -C \"D:\\Badru\\Projects\\Warungku\" diff -- \"src/app/(dashboard)/dashboard/page.tsx\")",
+      "Bash(git -C \"D:\\Badru\\Projects\\Warungku\" log --oneline --all -- \"src/app/(dashboard)/products/page.tsx\")",
+      "Bash(git -C \"D:\\Badru\\Projects\\Warungku\" log:*)",
+      "Bash(git -C \"D:\\Badru\\Projects\\Warungku\" log --oneline --all -- \"src/app/(dashboard)/staff/page.tsx\")",
+      "Bash(test:*)",
+      "Bash(git -C \"D:/Badru/Projects/Warungku\" status:*)",
+      "Bash(git -C \"D:/Badru/Projects/Warungku\" add package.json)",
+      "Bash(git -C \"D:/Badru/Projects/Warungku\" commit:*)",
+      "Skill(frontend-design)",
+      "Bash(git -C \"D:/Badru/Projects/Warungku\" log --oneline -15)"
+    ]
+  }
+}

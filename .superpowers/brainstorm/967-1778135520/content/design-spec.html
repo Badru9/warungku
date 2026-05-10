@@ -1,0 +1,220 @@
+<h2>Design Specification — Editorial Architecture</h2>
+<p class="subtitle">
+  Luxury real estate editorial aesthetic for Warungku stock management dashboard
+</p>
+
+<h3>1. Design Tokens</h3>
+<div class="mockup">
+  <div class="mockup-header">Color & Typography</div>
+  <div
+    class="mockup-body"
+    style="
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      font-size: 13px;
+      line-height: 1.6;
+    "
+  >
+    <div>
+      <div
+        style="
+          font-size: 11px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: #6b7280;
+          margin-bottom: 8px;
+        "
+      >
+        Base
+      </div>
+      <div
+        style="
+          height: 36px;
+          background: #f5f2ee;
+          border: 1px solid #e5e0d8;
+          margin-bottom: 6px;
+        "
+      ></div>
+      <div style="font-size: 11px; color: #6b7280">Warm off-white #f5f2ee</div>
+      <div
+        style="
+          height: 36px;
+          background: #ffffff;
+          border: 1px solid #e5e0d8;
+          margin-top: 12px;
+          margin-bottom: 6px;
+        "
+      ></div>
+      <div style="font-size: 11px; color: #6b7280">Card surface #ffffff</div>
+    </div>
+    <div>
+      <div
+        style="
+          font-size: 11px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: #6b7280;
+          margin-bottom: 8px;
+        "
+      >
+        Accent — Cool Modern
+      </div>
+      <div
+        style="
+          height: 36px;
+          background: #285156;
+          border: 1px solid #285156;
+          margin-bottom: 6px;
+        "
+      ></div>
+      <div style="font-size: 11px; color: #6b7280">Deep teal #285156</div>
+      <div
+        style="
+          height: 36px;
+          background: rgba(40, 81, 86, 0.12);
+          border: 1px solid rgba(40, 81, 86, 0.25);
+          margin-top: 12px;
+          margin-bottom: 6px;
+        "
+      ></div>
+      <div style="font-size: 11px; color: #6b7280">Glass teal overlay</div>
+    </div>
+    <div>
+      <div
+        style="
+          font-size: 11px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: #6b7280;
+          margin-bottom: 8px;
+        "
+      >
+        Typography
+      </div>
+      <div
+        style="
+          font-family: 'Playfair Display', serif;
+          font-size: 26px;
+          line-height: 0.95;
+        "
+      >
+        Playfair Display
+      </div>
+      <div style="font-size: 11px; color: #6b7280; margin-top: 4px">
+        Display / Page titles
+      </div>
+      <div
+        style="
+          font-family: 'DM Sans', sans-serif;
+          font-size: 14px;
+          margin-top: 12px;
+        "
+      >
+        DM Sans
+      </div>
+      <div style="font-size: 11px; color: #6b7280; margin-top: 4px">
+        Body / UI text
+      </div>
+    </div>
+    <div>
+      <div
+        style="
+          font-size: 11px;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: #6b7280;
+          margin-bottom: 8px;
+        "
+      >
+        Text
+      </div>
+      <div
+        style="
+          height: 18px;
+          background: #111111;
+          width: 92%;
+          margin-bottom: 6px;
+        "
+      ></div>
+      <div style="font-size: 11px; color: #6b7280">Primary text #111111</div>
+      <div
+        style="
+          height: 18px;
+          background: #6b7280;
+          width: 70%;
+          margin-top: 12px;
+          margin-bottom: 6px;
+        "
+      ></div>
+      <div style="font-size: 11px; color: #6b7280">Secondary #6b7280</div>
+    </div>
+  </div>
+</div>
+
+<h3>2. Login Page</h3>
+<p>
+  Full-viewport hero with luxury architectural photography background
+  (Unsplash). Oversized serif headline, glassmorphism login card floating
+  center-right. Subtle teal glow on input focus. Ghost CTA button.
+</p>
+
+<h3>3. Dashboard Layout</h3>
+<p>
+  Sidebar collapses to hamburger on mobile. Top nav bar with thin teal bottom
+  border. Page titles set in 48px Playfair Display with tight line-height.
+  Content cards have generous padding (40px), thin teal top border, and soft
+  drop-shadow.
+</p>
+
+<h3>4. Section Variations</h3>
+<div class="cards">
+  <div class="card" data-choice="products">
+    <div class="card-body">
+      <h3>Products</h3>
+      <p>
+        Asymmetric 3-column grid. Large hero product card spans 2 cols.
+        Teal-tinted card borders. Quick-action FAB in deep teal.
+      </p>
+    </div>
+  </div>
+  <div class="card" data-choice="transactions">
+    <div class="card-body">
+      <h3>Transactions</h3>
+      <p>
+        Clean table-first layout with teal-striped rows. Stat cards at top use
+        glassmorphism. Date filters stacked horizontally with teal pill-style
+        active state.
+      </p>
+    </div>
+  </div>
+  <div class="card" data-choice="staff">
+    <div class="card-body">
+      <h3>Staff</h3>
+      <p>
+        Card grid with circular avatar insets. Each card has a thin left teal
+        border accent. Role badges in soft teal capsules.
+      </p>
+    </div>
+  </div>
+</div>
+
+<h3>5. Components</h3>
+<ul>
+  <li>
+    <strong>Buttons:</strong> Outlined teal with 4px radius, uppercase DM Sans,
+    letter-spacing .1em. Hover: teal fill, white text.
+  </li>
+  <li>
+    <strong>Inputs:</strong> Transparent background, teal bottom border-only.
+    Focus: soft teal glow.
+  </li>
+  <li>
+    <strong>Cards:</strong> White surface, 40px padding, 12px radius, thin teal
+    top accent stripe, box-shadow: 0 8px 30px rgba(40,81,86,.08).
+  </li>
+  <li>
+    <strong>Tables:</strong> Minimalist, no vertical lines, teal-tinted
+    alternate rows, teal header underline.
+  </li>
+</ul>

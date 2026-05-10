@@ -69,7 +69,10 @@ export const productsService = {
     return apiClient.post('/products', payload);
   },
 
-  updateProduct: async (id: string, payload: Partial<CreateProductPayload>): Promise<Product> => {
+  updateProduct: async (
+    id: string,
+    payload: Partial<CreateProductPayload>,
+  ): Promise<Product> => {
     return apiClient.patch(`/products/${id}`, payload);
   },
 
